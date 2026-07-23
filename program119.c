@@ -1,0 +1,28 @@
+#include<stdio.h>
+//ERROR Due to STDLIB Header file
+
+
+int main()
+{
+    int *Brr = NULL ;
+    int iLength = 0 , iCnt = 0 ;
+
+    //Step 1 : Accept the number of elements
+    printf("Enter Number Of Elements\n");
+    scanf("%d",&iLength);
+
+    //Step 2 : Allocate the Memory
+    Brr = (int *)malloc(iLength * sizeof(int));
+
+    //Step 3 : Accept the values from User
+    for(iCnt = 0 ; iCnt < iLength ; iCnt++)
+    {
+        scanf("%d",&Brr[iCnt]);
+    }
+    //Step 4 : Use The Memory (Logic)
+
+    //Step 5 : Deallocate the memory
+    free (Brr);
+
+    return 0 ;
+}
